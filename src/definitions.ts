@@ -35,7 +35,7 @@ export interface StartNavigationOptions {
   travelMode?: TravelMode
 }
 
-export type TravelMode = 'driving' | 'walking' | 'transit' | 'bicycling';
+export type TravelMode = "driving" | "walking" | "transit" | "bicycling";
 
 export interface StartNavigationPlugin {
   /**

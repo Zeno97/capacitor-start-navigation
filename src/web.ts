@@ -3,15 +3,9 @@ import { WebPlugin, registerPlugin } from "@capacitor/core";
 import type { StartNavigationOptions, StartNavigationPlugin } from "./definitions";
 
 export class StartNavigationPluginWeb extends WebPlugin implements StartNavigationPlugin {
-  constructor() {
-    super({
-      name: "StartNavigationPlugin",
-      platforms: ["web"],
-    });
-  }
 
   async launchMapsApp(options: StartNavigationOptions): Promise<void> {
-    const travelMode = options.travelMode || 'driving';
+    const travelMode = options.travelMode || "driving";
     let addressQuery = null;
     if (options.address) {
       if (options.address.street != null) {
